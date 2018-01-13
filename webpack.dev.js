@@ -9,10 +9,10 @@ module.exports = merge(common, {
             {
                 test: /\.jsx?$/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['react', 'env']
-                    }
+                    loader: 'babel-loader'
+                    // options: {
+                    //     presets: ['react', 'env']
+                    // }
                 }
             },
             {
