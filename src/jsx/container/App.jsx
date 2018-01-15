@@ -2,6 +2,7 @@ import React from 'react';
 import CommentWrapper from '../components/CommentWrapper';
 import {connect} from 'react-redux';
 import commentReducer from '../../reducers/commentReducer';
+import Navbar from '../components/Navbar';
 
 class App extends React.Component {
     constructor() {
@@ -10,17 +11,18 @@ class App extends React.Component {
 
     render() {
         return ( 
-            <div>
-                <div className="publisher">
-                    <CommentWrapper content={this.props.comment.content}/>
-                    <div className="btnWrap">
-                        <a
-                            className="publishBtn"
-                            href="javascript:void(0)"
-                            onClick={() => this.props.setPlaceholder('changed content')}>发布</a>
-                    </div>
-                </div>
-            </div>
+            // <div>
+            //     <div className="publisher">
+            //         <CommentWrapper content={this.props.comment.content}/>
+            //         <div className="btnWrap">
+            //             <a
+            //                 className="publishBtn"
+            //                 href="javascript:void(0)"
+            //                 onClick={() => this.props.setPlaceholder('changed content')}>发布</a>
+            //         </div>
+            //     </div>
+            // </div>
+            <Navbar/>
         );
     }
 }
