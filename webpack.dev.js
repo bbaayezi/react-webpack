@@ -1,6 +1,6 @@
 const path = require('path');
 const merge = require('webpack-merge');
-
+const babelOption = require('./babelOption');
 const common = require('./webpack.common');
 
 module.exports = merge(common, {
@@ -9,10 +9,8 @@ module.exports = merge(common, {
             {
                 test: /\.jsx?$/,
                 use: {
-                    loader: 'babel-loader'
-                    // options: {
-                    //     presets: ['react', 'env']
-                    // }
+                    loader: 'babel-loader',
+                    options: babelOption
                 }
             },
             {

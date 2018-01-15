@@ -1,5 +1,6 @@
-{
-    "presets": [
+const option = {
+    babelrc: false,
+    presets: [
         ["env", {
             "targets": {
                 "android": 30,
@@ -13,10 +14,12 @@
         }],
         "react"
     ],
-    "plugins": [
+    plugins: [
         "transform-es3-member-expression-literals",
         "transform-es3-property-literals",
         "transform-object-rest-spread",
         "transform-class-properties"
     ]
 }
+
+module.exports = option;
